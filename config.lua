@@ -4,7 +4,7 @@ Config.MinimalDoctors = 2                                    -- How many players
 Config.DocCooldown = 1                                       -- Cooldown between doctor calls allowed, in minutes
 Config.WipeInventoryOnRespawn = true                         -- Enable or disable removing all the players items when they respawn at the hospital
 Config.Helicopter = 'polmav'                                 -- Helicopter model that players with the ambulance job can use
-Config.BillCost = 2000                                       -- Price that players are charged for using the hospital check-in system
+Config.BillCost = 1500                                       -- Price that players are charged for using the hospital check-in system
 Config.DeathTime = 300                                       -- How long the timer is for players to bleed out completely and respawn at the hospital
 Config.ReviveInterval = 360                                  -- How long the timer is for players to revive a player in laststand
 Config.MinimumRevive = 300                                   -- How long the timer is for players to revive a player in laststand
@@ -37,21 +37,29 @@ Config.AlertShowInfo = 2            -- How many injuries a player must have befo
 
 Config.Locations = {                -- Edit the various interaction points for players or create new ones
     ['checking'] = {
-        vector3(308.19, -595.35, 43.29),
-        vector3(-254.54, 6331.78, 32.43), -- paleto
+        vector3(-436.16, -325.81, 34.91), -- Zonah
+        vector3(1674.81, 3666.17, 35.34), -- Sandy
+        vector3(1672.41, 3652.76, 35.34), -- Sandy
     },
     ['duty'] = {
-        vector3(311.18, -599.25, 43.29),
-        vector3(-254.88, 6324.5, 32.58), -- paleto
+        vector3(1670.83, 3655.24, 35.34), -- Sandy
+        vector3(-432.23, -318.81, 34.91), -- Zonah
     },
     ['vehicle'] = {
-        vector4(294.578, -574.761, 43.179, 35.79),
-        vector4(-234.28, 6329.16, 32.15, 222.5), -- paleto
+        vector4(-491.98, -336.8, 34.37, 173.0), -- Zonah
+        vector4(1660.04, 3666.2, 35.34, 295.97), -- Sandy
+        vector4(1658.0, 3669.78, 35.34, 301.24), -- Sandy
+        vector4(1655.9, 3673.16, 35.34, 301.32), -- Sandy
     },
     ['helicopter'] = {
-        vector4(351.58, -587.45, 74.16, 160.5),
-        vector4(-475.43, 5988.353, 31.716, 31.34), -- paleto
+        vector4(-456.33, -291.36, 78.17, 50.43), -- Zonah
+        vector4(-447.37, -312.43, 78.17, 22.27), -- Zonah
+        vector4(1637.98, 3653.51, 35.24, 54.25), -- Sandy
     },
+    -- ['armory'] = {
+    --     vector3(1660.81, 3660.0, 35.34), -- Sandy
+    --     vector3(-457.15, -309.71, 34.91), -- Zonah
+    -- },
     ['roof'] = {
         vector4(338.5, -583.85, 74.16, 245.5),
     },
@@ -59,21 +67,22 @@ Config.Locations = {                -- Edit the various interaction points for p
         vector3(298.74, -599.33, 43.29),
     },
     ['stash'] = {
-        vector3(309.78, -596.6, 43.29),
+        vector3(1660.36, 3657.36, 35.34), -- Sandy
+        vector3(-438.4, -319.02, 34.91), -- Zonah
     },
     ['beds'] = {
-        { coords = vector4(353.1, -584.6, 43.11, 152.08),    taken = false, model = 1631638868 },
-        { coords = vector4(356.79, -585.86, 43.11, 152.08),  taken = false, model = 1631638868 },
-        { coords = vector4(354.12, -593.12, 43.1, 336.32),   taken = false, model = 2117668672 },
-        { coords = vector4(350.79, -591.8, 43.1, 336.32),    taken = false, model = 2117668672 },
-        { coords = vector4(346.99, -590.48, 43.1, 336.32),   taken = false, model = 2117668672 },
-        { coords = vector4(360.32, -587.19, 43.02, 152.08),  taken = false, model = -1091386327 },
-        { coords = vector4(349.82, -583.33, 43.02, 152.08),  taken = false, model = -1091386327 },
-        { coords = vector4(326.98, -576.17, 43.02, 152.08),  taken = false, model = -1091386327 },
-        --- paleto
-        { coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672 },
-        { coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672 },
-        { coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672 },
+        -- Mount Zonah
+        {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
+        {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
+        {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
+        {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
+        {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
+        {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
+        -- Sandy
+        {coords = vector4(1662.47, 3640.21, 36.34, 32.86), taken = false, model = 1004440924 },
+        {coords = vector4(1666.97, 3642.4, 36.34, 29.6), taken = false, model = 1004440924 },
+        {coords = vector4(1671.62, 3645.16, 36.34, 30.7), taken = false, model = 1004440924 },
+        {coords = vector4(1675.84, 3647.52, 36.34, 31.91), taken = false, model = 1004440924 },
     },
     ['jailbeds'] = {
         { coords = vector4(1761.96, 2597.74, 45.66, 270.14), taken = false, model = 2117668672 },
@@ -107,7 +116,8 @@ Config.Locations = {                -- Edit the various interaction points for p
         },
     },
     ['stations'] = {
-        { label = Lang:t('info.pb_hospital'), coords = vector3(304.27, -600.33, 43.28) }
+        {label = Lang:t('info.mz_hospital'), coords = vector3(-445.97, -341.17, 34.5) }, -- Zonah
+        {label = Lang:t('info.ss_hospital'), coords = vector3(1675.03, 3661.04, 35.34) }, -- Sandy
     }
 }
 
@@ -436,6 +446,44 @@ Config.Weapons = { -- Correspond weapon names to their class number
     [`WEAPON_EXHAUSTION`] = Config.WeaponClasses['SUFFOCATING'],          -- Exhaust
     [`WEAPON_BZGAS`] = Config.WeaponClasses['SUFFOCATING'],
     [`WEAPON_SMOKEGRENADE`] = Config.WeaponClasses['SUFFOCATING'],
+
+    -- Custom Weapons
+    [`WEAPON_BEANGBAGSHOTGUN`] = Config.WeaponClasses['NONE'],
+    --[[ HIGH CALIBER ]]
+    [`WEAPON_DE`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_M4`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_HK416`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_AR15`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_AK47`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_M70`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_SCARH`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_MK14`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_M110`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_HUNTINGRIFLE`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_AKS74`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_AK74`] = Config.WeaponClasses['HIGH_CALIBER'],
+    --[[ MEDIUM CALIBER ]]
+    [`WEAPON_UZI`] = Config.WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_MAC10`] = Config.WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_MP9`] = Config.WeaponClasses['MEDIUM_CALIBER'],
+    [`WEAPON_MP5`] = Config.WeaponClasses['MEDIUM_CALIBER'],
+    --[[ SMALL CALIBER ]]
+    [`WEAPON_GLOCK17`] = Config.WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_M9`] = Config.WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_M1911`] = Config.WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_FNX45`] = Config.WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_GLOCK22`] = Config.WeaponClasses['SMALL_CALIBER'],
+    [`WEAPON_GLOCK18C`] = Config.WeaponClasses['SMALL_CALIBER'],
+    --[[ SHOTGUN ]]
+    [`WEAPON_REMINGTON`] = Config.WeaponClasses['SHOTGUN'],
+    [`WEAPON_MOSSBERG`] = Config.WeaponClasses['SHOTGUN'],
+    --[[ CUTTING ]]
+    [`WEAPON_SHIV`] = Config.WeaponClasses['CUTTING'],
+    [`WEAPON_KATANA`] = Config.WeaponClasses['CUTTING'],
+    [`WEAPON_KARAMBIT`] = Config.WeaponClasses['CUTTING'],
+    --[[ HEAVY IMPACT ]]
+    [`WEAPON_SLEDGEHAMMER`] = Config.WeaponClasses['HEAVY_IMPACT'],
+    [`WEAPON_COLBATON`] = Config.WeaponClasses['HEAVY_IMPACT'],
 }
 
 Config.VehicleSettings = { -- Enable or disable vehicle extras when pulling them from the ambulance job vehicle spawner
