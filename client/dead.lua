@@ -197,6 +197,7 @@ CreateThread(function()
                         -- TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.civ_down'))
                         exports['ps-dispatch']:InjuriedPerson()
                         exports['envi-medic']:SendHelp()
+                        -- exports["jim-npcservice"]:callAmbi()
                         emsNotified = true
                     end
                 end
