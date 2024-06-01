@@ -7,7 +7,7 @@ Config.Helicopter = 'polmav'                                 -- Helicopter model
 Config.BillCost = 1500                                       -- Price that players are charged for using the hospital check-in system
 Config.DeathTime = 300                                       -- How long the timer is for players to bleed out completely and respawn at the hospital
 Config.ReviveInterval = 360                                  -- How long the timer is for players to revive a player in laststand
-Config.MinimumRevive = 300                                   -- How long the timer is for players to revive a player in laststand
+Config.MinimumRevive = 350                                   -- How long the timer is for players to revive a player in laststand
 Config.PainkillerInterval = 60                               -- Set the length of time painkillers last (per one)
 Config.HealthDamage = 5                                      -- Minumum damage done to health before checking for injuries
 Config.ArmorDamage = 5                                       -- Minumum damage done to armor before checking for injuries
@@ -39,7 +39,7 @@ Config.Locations = {                -- Edit the various interaction points for p
     ['checking'] = {
         vector3(-436.16, -325.81, 34.91), -- Zonah
         vector3(1674.81, 3666.17, 35.34), -- Sandy
-        vector3(1672.41, 3652.76, 35.34), -- Sandy
+        -- vector3(1672.41, 3652.76, 35.34), -- Sandy
     },
     ['duty'] = {
         vector3(1670.83, 3655.24, 35.34), -- Sandy
@@ -92,26 +92,25 @@ Config.Locations = {                -- Edit the various interaction points for p
     },
     ['hospital'] = {
         {
-            ['name'] = Lang:t('info.pb_hospital'),
-            ['location'] = vector3(308.36, -595.25, 43.28),
+            ['name'] = Lang:t('info.mz_hospital'),
+            ['location'] = vector3(-436.16, -325.81, 34.91),
             ['beds'] = {
-                { coords = vector4(353.1, -584.6, 43.11, 152.08),   taken = false, model = 1631638868 },
-                { coords = vector4(356.79, -585.86, 43.11, 152.08), taken = false, model = 1631638868 },
-                { coords = vector4(354.12, -593.12, 43.1, 336.32),  taken = false, model = 2117668672 },
-                { coords = vector4(350.79, -591.8, 43.1, 336.32),   taken = false, model = 2117668672 },
-                { coords = vector4(346.99, -590.48, 43.1, 336.32),  taken = false, model = 2117668672 },
-                { coords = vector4(360.32, -587.19, 43.02, 152.08), taken = false, model = -1091386327 },
-                { coords = vector4(349.82, -583.33, 43.02, 152.08), taken = false, model = -1091386327 },
-                { coords = vector4(326.98, -576.17, 43.02, 152.08), taken = false, model = -1091386327 },
+                {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
+                {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
+                {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
+                {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
+                {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
+                {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
             },
         },
         {
-            ['name'] = Lang:t('info.paleto_hospital'),
-            ['location'] = vector3(-254.54, 6331.78, 32.43),
+            ['name'] = Lang:t('info.ss_hospital'),
+            ['location'] = vector3(1674.81, 3666.17, 35.34),
             ['beds'] = {
-                { coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672 },
-                { coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672 },
-                { coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672 },
+                {coords = vector4(1662.47, 3640.21, 36.34, 32.86), taken = false, model = 1004440924 },
+                {coords = vector4(1666.97, 3642.4, 36.34, 29.6), taken = false, model = 1004440924 },
+                {coords = vector4(1671.62, 3645.16, 36.34, 30.7), taken = false, model = 1004440924 },
+                {coords = vector4(1675.84, 3647.52, 36.34, 31.91), taken = false, model = 1004440924 },
             },
         },
     },
