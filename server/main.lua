@@ -18,19 +18,24 @@ AddEventHandler('txAdmin:events:healedPlayer', function(eventData)
 	TriggerClientEvent('hospital:client:HealInjuries', eventData.id, 'full')
 end)
 
-RegisterNetEvent('hospital:server:SendToBed', function(bedId, isRevive, hospitalIndex)
-	local src = source
-	local Player = QBCore.Functions.GetPlayer(src)
-	TriggerClientEvent('hospital:client:SendToBed', src, bedId, Config.Locations['hospital'][hospitalIndex]['beds'][bedId], isRevive)
-	TriggerClientEvent('hospital:client:SetBed', -1, bedId, true, hospitalIndex)
-	if exports['m-Insurance']:haveHealthInsurance(citizenid) then -- m-insurance
-		Player.Functions.RemoveMoney('bank', Config.BillCost - 500, 'respawned-at-hospital')
-		exports['qb-banking']:AddMoney('ambulance', Config.BillCost - 500, 'Player treatment')
-	else
-		Player.Functions.RemoveMoney('bank', Config.BillCost, 'respawned-at-hospital')
-		exports['qb-banking']:AddMoney('ambulance', Config.BillCost, 'Player treatment')
-	end
-	TriggerClientEvent('hospital:client:SendBillEmail', src, Config.BillCost, Config.Locations['hospital'][hospitalIndex]['name'])
+RegisterNetEvent('hospital:server:SendToBed', function(bedId, isRevive)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local citizenid = Player.PlayerData.citizenid 
+
+    TriggerClientEvent('hospital:client:SendToBed', src, bedId, Config.Locations["beds"][bedId], isRevive)
+    TriggerClientEvent('hospital:client:SetBed', -1, bedId, true)
+	
+    MySQL.Async.fetchScalar('SELECT citizenid FROM m_insurance_health WHERE citizenid = ?', {citizenid}, function(result)
+        if result then
+            Player.Functions.RemoveMoney("bank", Config.BillCost - 500, "respawned-at-hospital") -- The value "500" is the discount
+	    exports['qb-banking']:AddMoney("ambulance", Config.BillCost - 500) -- The value "500" is the discount
+        else
+            Player.Functions.RemoveMoney("bank", Config.BillCost , "respawned-at-hospital")
+	    exports['qb-banking']:AddMoney("ambulance", Config.BillCost)
+        end
+    end)
+    TriggerClientEvent('hospital:client:SendBillEmail', src, Config.BillCost)
 end)
 
 RegisterNetEvent('hospital:server:RespawnAtHospital', function(hospitalIndex)
