@@ -42,6 +42,7 @@ local Translations = {
         paleto_hospital = 'Paleto Hospital',
         pa_hospital = 'Paleto Bay Hospital',
         mz_hospital = 'Mt Zonah Hospital',
+        dtm_hospital = 'Downtown Medical Center',
         ss_hospital = 'Sandy Shores Hospital',
         pain_message = 'Your %{limb} feels %{severity}',
         many_places = 'You have pain in many places...',
