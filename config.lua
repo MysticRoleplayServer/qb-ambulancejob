@@ -37,24 +37,29 @@ Config.AlertShowInfo = 2            -- How many injuries a player must have befo
 
 Config.Locations = {                -- Edit the various interaction points for players or create new ones
     ['checking'] = {
-        vector3(-436.16, -325.81, 34.91), -- Zonah
         vector3(1674.81, 3666.17, 35.34), -- Sandy
-        -- vector3(1672.41, 3652.76, 35.34), -- Sandy
+        vector3(-555.6, -604.48, 30.54), -- DTM
+        -- vector3(-436.16, -325.81, 34.91), -- Zonah
     },
     ['duty'] = {
         vector3(1670.83, 3655.24, 35.34), -- Sandy
-        vector3(-432.23, -318.81, 34.91), -- Zonah
+        vector3(-529.69, -603.94, 30.59), -- DTM
+        -- vector3(-432.23, -318.81, 34.91), -- Zonah
     },
     ['vehicle'] = {
-        vector4(-491.98, -336.8, 34.37, 173.0), -- Zonah
         vector4(1660.04, 3666.2, 35.34, 295.97), -- Sandy
         vector4(1658.0, 3669.78, 35.34, 301.24), -- Sandy
         vector4(1655.9, 3673.16, 35.34, 301.32), -- Sandy
+        vector4(-513.28, -596.18, 30.3, 179.15), -- DTM
+        -- vector4(-491.98, -336.8, 34.37, 173.0), -- Zonah
     },
     ['helicopter'] = {
-        vector4(-456.33, -291.36, 78.17, 50.43), -- Zonah
-        vector4(-447.37, -312.43, 78.17, 22.27), -- Zonah
         vector4(1637.98, 3653.51, 35.24, 54.25), -- Sandy
+        vector4(-525.75, -619.64, 55.74, 86.84), -- DTM
+        vector4(-565.92, -619.4, 55.74, 91.02), -- DTM
+        vector4(-585.24, -619.55, 55.74, 90.51), -- DTM
+        -- vector4(-456.33, -291.36, 78.17, 50.43), -- Zonah
+        -- vector4(-447.37, -312.43, 78.17, 22.27), -- Zonah
     },
     -- ['armory'] = {
     --     vector3(1660.81, 3660.0, 35.34), -- Sandy
@@ -68,21 +73,24 @@ Config.Locations = {                -- Edit the various interaction points for p
     },
     ['stash'] = {
         vector3(1660.36, 3657.36, 35.34), -- Sandy
-        vector3(-438.4, -319.02, 34.91), -- Zonah
+        vector3(-547.53, -601.86, 34.68), -- DTM
+        -- vector3(-438.4, -319.02, 34.91), -- Zonah
     },
     ['beds'] = {
-        -- Mount Zonah
-        {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
-        {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
-        {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
-        {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
-        {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
-        {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
         -- Sandy
         {coords = vector4(1662.47, 3640.21, 36.34, 32.86), taken = false, model = 1004440924 },
         {coords = vector4(1666.97, 3642.4, 36.34, 29.6), taken = false, model = 1004440924 },
         {coords = vector4(1671.62, 3645.16, 36.34, 30.7), taken = false, model = 1004440924 },
         {coords = vector4(1675.84, 3647.52, 36.34, 31.91), taken = false, model = 1004440924 },
+        -- DTM
+        {coords = vector4(-563.54, -605.73, 31.47, 4.98), taken = false},
+        -- Mount Zonah
+        -- {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
+        -- {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
+        -- {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
+        -- {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
+        -- {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
+        -- {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
     },
     ['jailbeds'] = {
         { coords = vector4(1761.96, 2597.74, 45.66, 270.14), taken = false, model = 2117668672 },
@@ -91,18 +99,6 @@ Config.Locations = {                -- Edit the various interaction points for p
         { coords = vector4(1771.85, 2591.85, 45.66, 91.51),  taken = false, model = 2117668672 },
     },
     ['hospital'] = {
-        {
-            ['name'] = Lang:t('info.mz_hospital'),
-            ['location'] = vector3(-436.16, -325.81, 34.91),
-            ['beds'] = {
-                {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
-                {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
-                {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
-                {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
-                {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
-                {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
-            },
-        },
         {
             ['name'] = Lang:t('info.ss_hospital'),
             ['location'] = vector3(1674.81, 3666.17, 35.34),
@@ -113,10 +109,30 @@ Config.Locations = {                -- Edit the various interaction points for p
                 {coords = vector4(1675.84, 3647.52, 36.34, 31.91), taken = false, model = 1004440924 },
             },
         },
+        {
+            ['name'] = Lang:t('info.dtm_hospital'),
+            ['location'] = vector3(-555.6, -604.48, 30.54),
+            ['beds'] = {
+                {coords = vector4(-563.54, -605.73, 31.47, 4.98), taken = false},
+            },
+        },
+        -- {
+        --     ['name'] = Lang:t('info.mz_hospital'),
+        --     ['location'] = vector3(-436.16, -325.81, 34.91),
+        --     ['beds'] = {
+        --         {coords = vector4(-455.28, -278.22, 35.84, 203.25), taken = false, model = 2117668672 },
+        --         {coords = vector4(-451.53, -285.03, 35.83, 25.93), taken = false, model = 2117668672 },
+        --         {coords = vector4(-454.94, -286.29, 35.83, 31.75), taken = false, model = 2117668672 },
+        --         {coords = vector4(-460.34, -288.48, 35.83, 29.23), taken = false, model = 2117668672 },
+        --         {coords = vector4(-466.42, -282.91, 35.84, 201.77), taken = false, model = 2117668672 },
+        --         {coords = vector4(-462.96, -281.33, 35.84, 197.74), taken = false, model = 2117668672 },
+        --     },
+        -- },
     },
     ['stations'] = {
-        {label = Lang:t('info.mz_hospital'), coords = vector3(-445.97, -341.17, 34.5) }, -- Zonah
         {label = Lang:t('info.ss_hospital'), coords = vector3(1675.03, 3661.04, 35.34) }, -- Sandy
+        {label = Lang:t('info.dtm_hospital'), coords = vector3(-555.6, -604.48, 30.54) }, -- DTM
+        -- {label = Lang:t('info.mz_hospital'), coords = vector3(-445.97, -341.17, 34.5) }, -- Zonah
     }
 }
 
